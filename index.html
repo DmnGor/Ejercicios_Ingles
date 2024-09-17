@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fill in the Blanks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Inglés - Present Simple</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Fill in the blanks with the correct form of the verb</h1>
-  
-  <form id="exercise-form">
-    1. Yesterday, I <input type="text" id="verb1" /> (go) to the supermarket.<br/>
-    2. She <input type="text" id="verb2" /> (read) the book last night.<br/>
-    3. They have <input type="text" id="verb3" /> (finish) their homework.<br/>
-    4. We <input type="text" id="verb4" /> (eat) lunch together yesterday.<br/>
-    5. He has never <input type="text" id="verb5" /> (see) that movie before.<br/><br/>
-    
-    <button type="button" onclick="checkAnswers()">Submit Answers</button>
-  </form>
+    <div class="container">
+        <h1>Práctica de Present Simple</h1>
+        <p>Completa las oraciones con la forma correcta del verbo en presente simple.</p>
+        
+        <div class="exercise">
+            <p>1. She <input type="text" id="answer1" placeholder="____"> (go) to school every day.</p>
+        </div>
+        
+        <div class="exercise">
+            <p>2. They <input type="text" id="answer2" placeholder="____"> (play) football on weekends.</p>
+        </div>
+        
+        <div class="exercise">
+            <p>3. He <input type="text" id="answer3" placeholder="____"> (watch) TV at night.</p>
+        </div>
+        
+        <button onclick="checkAnswers()">Verificar respuestas</button>
+        <p id="result"></p>
+    </div>
 
-  <p id="result"></p>
-
-  <script>
-    function checkAnswers() {
-      const answers = {
-        verb1: "went",
-        verb2: "read",
-        verb3: "finished",
-        verb4: "ate",
-        verb5: "seen"
-      };
-
-      let score = 0;
-      for (let i = 1; i <= 5; i++) {
-        const userAnswer = document.getElementById(`verb${i}`).value.trim().toLowerCase();
-        if (userAnswer === answers[`verb${i}`]) {
-          score++;
-        }
-      }
-
-      document.getElementById("result").innerText = `You got ${score} out of 5 correct.`;
-    }
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>

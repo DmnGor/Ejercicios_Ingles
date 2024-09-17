@@ -52,3 +52,10 @@ button:hover {
     font-size: 18px;
     margin-top: 20px;
 }
+
+/* Estilo para las respuestas correctas mostradas */
+.correct-answer {
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+}

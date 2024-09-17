@@ -13,16 +13,25 @@ function checkAnswers() {
     // Verificar respuesta 1
     if (userAnswer1 === correctAnswers[0]) {
         correctCount++;
+        document.getElementById("correct1").textContent = "";  // No mostrar nada si es correcto
+    } else {
+        document.getElementById("correct1").textContent = `La respuesta correcta es: ${correctAnswers[0]}`;
     }
     
     // Verificar respuesta 2
     if (userAnswer2 === correctAnswers[1]) {
         correctCount++;
+        document.getElementById("correct2").textContent = "";  // No mostrar nada si es correcto
+    } else {
+        document.getElementById("correct2").textContent = `La respuesta correcta es: ${correctAnswers[1]}`;
     }
     
     // Verificar respuesta 3
     if (userAnswer3 === correctAnswers[2]) {
         correctCount++;
+        document.getElementById("correct3").textContent = "";  // No mostrar nada si es correcto
+    } else {
+        document.getElementById("correct3").textContent = `La respuesta correcta es: ${correctAnswers[2]}`;
     }
     
     // Mostrar resultados
